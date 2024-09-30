@@ -1,0 +1,109 @@
+---
+title: How to Create a React Native App with TypeScript Without Using Expo
+description: Learn how to set up a React Native project with TypeScript without Expo or any other Frameworks. Bare-Bone React-Native App gives you full control over native code. This guide we will help you steps by step from installation to creation of your first app.
+keywords: React Native, TypeScript, JavaScript, Mobile Development, No Expo, No Farmework, React Native Setup, React Native CLI
+author: The Brave Coders
+date: 29-09-2024
+---
+
+# How to Create a React Native App with TypeScript Without Using Expo
+
+Building a React Native app with TypeScript gives you strong typing for your code, making it easier to avoid bugs and improve development. While Expo can make the setup quicker, you might want more control over native code or third-party libraries. In this guide, we'll walk through setting up a React Native project with TypeScript **without using Expo**. We'll use the React Native CLI instead.
+
+## Why Avoid Expo?
+
+Expo is great for getting started quickly, but it has limitations. You can't easily modify native code or use certain third-party libraries that require direct access to the Android or iOS platforms. If you need more flexibility, skipping Expo might be the right choice.
+
+## Prerequisites
+
+Before you start, make sure you have the following installed on your machine:
+
+- **Node.js** (recommended version 18.x or higher)
+- **Latest Stable JDK or OpenJDK** (for Android development)\*\*
+- **Watchman** (for macOS users)
+- **Xcode** (for iOS development, macOS only)
+- **Android Studio** (for Android development)
+- **Android SDK** (You can Download from Android Studio)
+
+You'll also need a basic understanding of TypeScript and React Native.
+
+## Set Environment Variables (If not already)
+
+#### 1. `JAVA_HOME`
+
+Points to your Java Development Kit (JDK) installation.
+
+#### 2. `ANDROID_HOME`
+
+Points to your Android SDK installation.
+
+#### 3. `ANDROID_SDK`
+
+Points to the root directory of your Android SDK.
+
+#### 4. `PATH`
+
+Includes paths to the platform-tools and tools directories from the Android SDK, as well as Java binaries.
+
+---
+
+## Step 1: Unistall the React Native CLI
+
+If you previously installed a global react-native-cli package, please remove it as it may cause unexpected issues:
+
+To Unistall run this command:
+
+```bash
+npm uninstall -g react-native-cli @react-native-community/cli
+```
+
+## Step 2: Create a New Project with TypeScript
+
+React Native comes with TypeScript by default. To create a new project,
+run this command:
+
+```bash
+npx @react-native-community/cli@latest init MyNewProject
+```
+
+If you are having trouble with iOS, try to reinstall the dependencies by running:
+
+1. cd ios to navigate to the ios folder.
+2. bundle install to install Bundler
+3. bundle exec pod install to install the iOS dependencies managed by CocoaPods.
+
+## Step 3: Start Metro
+
+run this command:
+
+```bash
+npm start
+```
+
+## Step 4: Start Your App
+
+run this command to run your app:
+
+```bash
+npm run android
+```
+
+or if u want to run iOS:
+
+```bash
+npm run IOS
+```
+
+alternatively you can run these just by pressing **a** for **Android** and **i** for **iOS**.
+After running, npm start.
+
+## Step 5: Start Building Something Awesome 🥳
+
+Now that you have successfully run the app, let's modify it.
+
+- Open: **src/App.tsx** in your IDE and make some changes.
+- It should automatically update your app UI as you make changes. In case it not goto your terminal and press **R** for **Reload**.
+
+## That's it!
+
+Congratulations! You've successfully run and modified your first No Framework React Native app 🎊🎉🎈
